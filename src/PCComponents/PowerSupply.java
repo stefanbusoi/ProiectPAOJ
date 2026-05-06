@@ -1,5 +1,7 @@
+package PCComponents;
+
 public class PowerSupply extends PCComponent{
-    PowerSupply(float price, float powerUsage, String name) {
+    public PowerSupply(float price, float powerUsage, String name) {
         super(price, powerUsage, name);
     }
     @Override

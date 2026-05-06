@@ -1,10 +1,12 @@
-public class GPU extends PCComponent {
-    GPU(float price, float powerUsage, String name) {
+package PCComponents;
+
+public class Memory extends PCComponent {
+    public Memory(float price, float powerUsage, String name) {
         super(price, powerUsage, name);
     }
     @Override
     public String toString() {
-        StringBuilder stringBuilder=new StringBuilder("GPU{");
+        StringBuilder stringBuilder=new StringBuilder("Memory{");
         stringBuilder.append("Name=");
         stringBuilder.append(getName());
         stringBuilder.append("|Price=");

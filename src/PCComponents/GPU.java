@@ -1,11 +1,12 @@
-public class Storage extends PCComponent {
+package PCComponents;
 
-    Storage(float price, float powerUsage, String name) {
+public class GPU extends PCComponent {
+    public GPU(float price, float powerUsage, String name) {
         super(price, powerUsage, name);
     }
     @Override
     public String toString() {
-        StringBuilder stringBuilder=new StringBuilder("Storage{");
+        StringBuilder stringBuilder=new StringBuilder("GPU{");
         stringBuilder.append("Name=");
         stringBuilder.append(getName());
         stringBuilder.append("|Price=");

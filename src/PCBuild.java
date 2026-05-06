@@ -1,3 +1,5 @@
+import PCComponents.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,25 +23,13 @@ public class PCBuild {
         builder= new StringBuilder("Name:");
         builder.append(buildName);
         builder.append("|Motherboard:");
-        if(motherboard==null)
-            builder.append("None");
-        else
-            builder.append(motherboard.getName());
+        builder.append(PCComponent.getNameOrNone(motherboard));
         builder.append("|CPU:");
-        if(cpu==null)
-            builder.append("None");
-        else
-            builder.append(cpu.getName());
+        builder.append(PCComponent.getNameOrNone(cpu));
         builder.append("|GPU:");
-        if(gpu==null)
-            builder.append("None");
-        else
-            builder.append(gpu.getName());
+        builder.append(PCComponent.getNameOrNone(gpu));
         builder.append("|Power Supply:");
-        if(powerSupply==null)
-            builder.append("None");
-        else
-            builder.append(powerSupply.getName());
+        builder.append(PCComponent.getNameOrNone(powerSupply));
         builder.append("|Storage ");
         builder.append(storage.size());
         builder.append(" elements:{");
@@ -50,10 +40,7 @@ public class PCBuild {
         builder.append("}");
 
         builder.append("|Memory:");
-        if(memory==null)
-            builder.append("None");
-        else
-            builder.append(memory.getName());
+        builder.append(PCComponent.getNameOrNone(memory));
         return builder.toString();
     }
 

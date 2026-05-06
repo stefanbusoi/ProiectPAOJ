@@ -1,3 +1,5 @@
+package PCComponents;
+
 public class PCComponent implements Comparable<PCComponent> {
 
     private String name;
@@ -27,6 +29,14 @@ public class PCComponent implements Comparable<PCComponent> {
     }
     public String getName() {
         return name;
+    }
+
+
+    public static String getNameOrNone(PCComponent pcComponent){
+        if (pcComponent==null)
+            return "None";
+        else
+            return pcComponent.getName();
     }
 
 
