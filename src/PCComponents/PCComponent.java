@@ -1,7 +1,10 @@
 package PCComponents;
 
-public class PCComponent implements Comparable<PCComponent> {
 
+import java.util.function.Function;
+
+
+public class PCComponent implements Comparable<PCComponent> {
     private String name;
     private float price;
     private float powerUsage;

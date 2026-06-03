@@ -17,6 +17,10 @@ public class PCBuild {
         storage=new ArrayList<Storage>();
     }
 
+    public String getBuildName() {
+        return buildName;
+    }
+
     @Override
     public String toString() {
         StringBuilder builder;

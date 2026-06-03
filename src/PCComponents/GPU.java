@@ -1,6 +1,6 @@
 package PCComponents;
 
-public class GPU extends PCComponent {
+public class GPU extends PCComponent implements GraphicsCapability {
     public GPU(float price, float powerUsage, String name) {
         super(price, powerUsage, name);
     }
@@ -15,5 +15,22 @@ public class GPU extends PCComponent {
         stringBuilder.append(getPowerUsage());
         stringBuilder.append("}");
         return stringBuilder.toString();
+    }
+
+    @Override
+    public float getGraphicsPower() {
+        //TODO:IMPLEMENT
+        return 0;
+    }
+
+    @Override
+    public float getVRam() {
+        //TODO:IMPLEMENT
+        return 0;
+    }
+
+    @Override
+    public float getPowerConsumption() {
+        return getPowerUsage();
     }
 }
