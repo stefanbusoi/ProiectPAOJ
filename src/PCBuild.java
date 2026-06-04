@@ -20,7 +20,6 @@ public class PCBuild {
     public String getBuildName() {
         return buildName;
     }
-
     @Override
     public String toString() {
         StringBuilder builder;

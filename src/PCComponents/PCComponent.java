@@ -4,7 +4,8 @@ package PCComponents;
 import java.util.function.Function;
 
 
-public class PCComponent implements Comparable<PCComponent> {
+public abstract class PCComponent implements Comparable<PCComponent> {
+
     private String name;
     private float price;
     private float powerUsage;
@@ -35,6 +36,7 @@ public class PCComponent implements Comparable<PCComponent> {
     }
 
 
+    public abstract void Edit();
     public static String getNameOrNone(PCComponent pcComponent){
         if (pcComponent==null)
             return "None";

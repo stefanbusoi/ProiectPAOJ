@@ -1,9 +1,43 @@
 package PCComponents;
 
+import java.util.Scanner;
+
 public class GPU extends PCComponent implements GraphicsCapability {
-    public GPU(float price, float powerUsage, String name) {
+
+    float graphicsPower;
+    float vRAM;
+    public GPU(float price, float powerUsage, String name,float graphicsPower, float vRAM) {
         super(price, powerUsage, name);
+        this.graphicsPower=graphicsPower;
+        this.vRAM=vRAM;
     }
+
+    public static GPU readComponent(Scanner scanner){
+        float price;
+        float power;
+        String name;
+        float graphicsPower;
+        float vRAM;
+        System.out.println("Introdu numele: ");
+        name = scanner.nextLine();
+        System.out.println("Introdu pretul: ");
+        price = scanner.nextFloat();
+        System.out.println("Introdu consumul: ");
+        power = scanner.nextFloat();
+        System.out.println("Introdu puterea grafica: ");
+        graphicsPower = scanner.nextFloat();
+        System.out.println("Introdu memoria video: ");
+        vRAM = scanner.nextFloat();
+        GPU gpu = new GPU(price, power, name,graphicsPower,vRAM);
+        return gpu;
+    }   
+
+    @Override
+    public void Edit() {
+        //TODO: add implementation
+
+    }
+
     @Override
     public String toString() {
         StringBuilder stringBuilder=new StringBuilder("GPU{");
@@ -19,18 +53,12 @@ public class GPU extends PCComponent implements GraphicsCapability {
 
     @Override
     public float getGraphicsPower() {
-        //TODO:IMPLEMENT
-        return 0;
+        return graphicsPower;
     }
 
     @Override
     public float getVRam() {
-        //TODO:IMPLEMENT
-        return 0;
+        return vRAM;
     }
 
-    @Override
-    public float getPowerConsumption() {
-        return getPowerUsage();
-    }
 }
